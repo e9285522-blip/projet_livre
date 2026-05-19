@@ -29,4 +29,20 @@ def supprimer_livre():
         print(f"Le livre '{nom}' a été supprimé.")
     else:
         print(f"Le livre '{nom}' n'existe pas.")
-        
+def main():
+    while True:
+        afficher_menu()
+        choix = input("Entrez votre choix: ")
+        if choix == "1":
+            afficher_livres()
+        elif choix == "2":
+            ajouter_livre()
+        elif choix == "3":
+            modifier_livre()
+        elif choix == "4":
+            supprimer_livre()
+        elif choix == "5":
+            print("Au revoir!")
+            break
+        else:
+            print("Choix invalide. Veuillez réessayer.")
