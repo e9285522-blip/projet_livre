@@ -17,3 +17,16 @@ def ajouter_livre():
     livre.append(nom)
     print(f"Le livre '{nom}' a été ajouté.")
 def modifier_livre():
+    nom = input("Entrez le nom du livre à modifier: ")
+    if nom in livre:
+        nouveau_nom = input("Entrez le nouveau nom du livre: ")
+        index = livre.index(nom)
+        livre[index] = nouveau_nom
+def supprimer_livre():
+    nom = input("Entrez le nom du livre à supprimer: ")
+    if nom in livre:
+        livre.remove(nom)
+        print(f"Le livre '{nom}' a été supprimé.")
+    else:
+        print(f"Le livre '{nom}' n'existe pas.")
+        
